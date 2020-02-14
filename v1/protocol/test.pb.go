@@ -24,18 +24,18 @@ var _ = math.Inf
 const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 
 type Test1 struct {
-	DoubleNumber         float64  `protobuf:"fixed64,1,opt,name=double_number,json=doubleNumber,proto3" json:"double_number,omitempty"`
-	FloatNumber          float32  `protobuf:"fixed32,2,opt,name=float_number,json=floatNumber,proto3" json:"float_number,omitempty"`
-	I32Number            int32    `protobuf:"varint,3,opt,name=i32_number,json=i32Number,proto3" json:"i32_number,omitempty"`
-	I64Number            int64    `protobuf:"varint,4,opt,name=i64_number,json=i64Number,proto3" json:"i64_number,omitempty"`
-	U32Number            uint32   `protobuf:"varint,5,opt,name=u32_number,json=u32Number,proto3" json:"u32_number,omitempty"`
-	U64Number            uint64   `protobuf:"varint,6,opt,name=u64_number,json=u64Number,proto3" json:"u64_number,omitempty"`
-	S32Number            int32    `protobuf:"zigzag32,7,opt,name=s32_number,json=s32Number,proto3" json:"s32_number,omitempty"`
-	S64Number            int64    `protobuf:"zigzag64,8,opt,name=s64_number,json=s64Number,proto3" json:"s64_number,omitempty"`
-	F32Number            uint32   `protobuf:"fixed32,9,opt,name=f32_number,json=f32Number,proto3" json:"f32_number,omitempty"`
-	F64Number            uint64   `protobuf:"fixed64,10,opt,name=f64_number,json=f64Number,proto3" json:"f64_number,omitempty"`
-	Sf32Number           int32    `protobuf:"fixed32,11,opt,name=sf32_number,json=sf32Number,proto3" json:"sf32_number,omitempty"`
-	Sf64Number           int64    `protobuf:"fixed64,12,opt,name=sf64_number,json=sf64Number,proto3" json:"sf64_number,omitempty"`
+	DoubleValue          float64  `protobuf:"fixed64,1,opt,name=double_value,json=doubleValue,proto3" json:"double_value,omitempty"`
+	FloatValue           float32  `protobuf:"fixed32,2,opt,name=float_value,json=floatValue,proto3" json:"float_value,omitempty"`
+	I32Value             int32    `protobuf:"varint,3,opt,name=i32_value,json=i32Value,proto3" json:"i32_value,omitempty"`
+	I64Value             int64    `protobuf:"varint,4,opt,name=i64_value,json=i64Value,proto3" json:"i64_value,omitempty"`
+	U32Value             uint32   `protobuf:"varint,5,opt,name=u32_value,json=u32Value,proto3" json:"u32_value,omitempty"`
+	U64Value             uint64   `protobuf:"varint,6,opt,name=u64_value,json=u64Value,proto3" json:"u64_value,omitempty"`
+	S32Value             int32    `protobuf:"zigzag32,7,opt,name=s32_value,json=s32Value,proto3" json:"s32_value,omitempty"`
+	S64Value             int64    `protobuf:"zigzag64,8,opt,name=s64_value,json=s64Value,proto3" json:"s64_value,omitempty"`
+	F32Value             uint32   `protobuf:"fixed32,9,opt,name=f32_value,json=f32Value,proto3" json:"f32_value,omitempty"`
+	F64Value             uint64   `protobuf:"fixed64,10,opt,name=f64_value,json=f64Value,proto3" json:"f64_value,omitempty"`
+	Sf32Value            int32    `protobuf:"fixed32,11,opt,name=sf32_value,json=sf32Value,proto3" json:"sf32_value,omitempty"`
+	Sf64Value            int64    `protobuf:"fixed64,12,opt,name=sf64_value,json=sf64Value,proto3" json:"sf64_value,omitempty"`
 	BoolValue            bool     `protobuf:"varint,13,opt,name=bool_value,json=boolValue,proto3" json:"bool_value,omitempty"`
 	StringValue          string   `protobuf:"bytes,14,opt,name=string_value,json=stringValue,proto3" json:"string_value,omitempty"`
 	BytesValue           []byte   `protobuf:"bytes,15,opt,name=bytes_value,json=bytesValue,proto3" json:"bytes_value,omitempty"`
@@ -77,86 +77,86 @@ func (m *Test1) XXX_DiscardUnknown() {
 
 var xxx_messageInfo_Test1 proto.InternalMessageInfo
 
-func (m *Test1) GetDoubleNumber() float64 {
+func (m *Test1) GetDoubleValue() float64 {
 	if m != nil {
-		return m.DoubleNumber
+		return m.DoubleValue
 	}
 	return 0
 }
 
-func (m *Test1) GetFloatNumber() float32 {
+func (m *Test1) GetFloatValue() float32 {
 	if m != nil {
-		return m.FloatNumber
+		return m.FloatValue
 	}
 	return 0
 }
 
-func (m *Test1) GetI32Number() int32 {
+func (m *Test1) GetI32Value() int32 {
 	if m != nil {
-		return m.I32Number
+		return m.I32Value
 	}
 	return 0
 }
 
-func (m *Test1) GetI64Number() int64 {
+func (m *Test1) GetI64Value() int64 {
 	if m != nil {
-		return m.I64Number
+		return m.I64Value
 	}
 	return 0
 }
 
-func (m *Test1) GetU32Number() uint32 {
+func (m *Test1) GetU32Value() uint32 {
 	if m != nil {
-		return m.U32Number
+		return m.U32Value
 	}
 	return 0
 }
 
-func (m *Test1) GetU64Number() uint64 {
+func (m *Test1) GetU64Value() uint64 {
 	if m != nil {
-		return m.U64Number
+		return m.U64Value
 	}
 	return 0
 }
 
-func (m *Test1) GetS32Number() int32 {
+func (m *Test1) GetS32Value() int32 {
 	if m != nil {
-		return m.S32Number
+		return m.S32Value
 	}
 	return 0
 }
 
-func (m *Test1) GetS64Number() int64 {
+func (m *Test1) GetS64Value() int64 {
 	if m != nil {
-		return m.S64Number
+		return m.S64Value
 	}
 	return 0
 }
 
-func (m *Test1) GetF32Number() uint32 {
+func (m *Test1) GetF32Value() uint32 {
 	if m != nil {
-		return m.F32Number
+		return m.F32Value
 	}
 	return 0
 }
 
-func (m *Test1) GetF64Number() uint64 {
+func (m *Test1) GetF64Value() uint64 {
 	if m != nil {
-		return m.F64Number
+		return m.F64Value
 	}
 	return 0
 }
 
-func (m *Test1) GetSf32Number() int32 {
+func (m *Test1) GetSf32Value() int32 {
 	if m != nil {
-		return m.Sf32Number
+		return m.Sf32Value
 	}
 	return 0
 }
 
-func (m *Test1) GetSf64Number() int64 {
+func (m *Test1) GetSf64Value() int64 {
 	if m != nil {
-		return m.Sf64Number
+		return m.Sf64Value
 	}
 	return 0
 }
@@ -189,27 +189,26 @@ func init() {
 func init() { proto.RegisterFile("test.proto", fileDescriptor_c161fcfdc0c3ff1e) }
 
 var fileDescriptor_c161fcfdc0c3ff1e = []byte{
-	// 308 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x4c, 0x92, 0x3f, 0x4e, 0xf3, 0x40,
-	0x10, 0x47, 0xbf, 0xc9, 0xff, 0x1d, 0x3b, 0x5f, 0x82, 0xab, 0x34, 0x38, 0x03, 0x34, 0x53, 0x21,
-	0x91, 0x44, 0x39, 0x00, 0x07, 0xa0, 0x98, 0x82, 0x36, 0x8a, 0xc1, 0x46, 0x96, 0x4c, 0x16, 0x65,
-	0xbd, 0x48, 0xdc, 0x84, 0x23, 0x51, 0x72, 0x04, 0x14, 0x5a, 0x0e, 0x81, 0xbc, 0x89, 0xd9, 0xad,
-	0x2c, 0xbd, 0xdf, 0x7b, 0x5e, 0x69, 0xb5, 0x88, 0x75, 0x6e, 0xea, 0xeb, 0x97, 0xbd, 0xae, 0x75,
-	0x32, 0x72, 0x9f, 0x07, 0x5d, 0x5d, 0xfe, 0x74, 0xb1, 0xdf, 0x0c, 0x37, 0xc9, 0x15, 0x8e, 0x1f,
-	0xb5, 0xcd, 0xaa, 0x7c, 0xb3, 0xb3, 0xcf, 0x59, 0xbe, 0x9f, 0x01, 0x01, 0x83, 0xc4, 0x47, 0x78,
-	0xe7, 0x58, 0x72, 0x81, 0x71, 0x51, 0xe9, 0x6d, 0xdd, 0x3a, 0x1d, 0x02, 0xee, 0x48, 0xe4, 0xd8,
-	0x49, 0x39, 0x47, 0x2c, 0x97, 0x8b, 0x56, 0xe8, 0x12, 0x70, 0x5f, 0x54, 0xb9, 0x5c, 0x04, 0xf3,
-	0x7a, 0xd5, 0xce, 0x3d, 0x02, 0xee, 0x8a, 0x2a, 0xd7, 0x2b, 0x3f, 0x5b, 0x5f, 0xf7, 0x09, 0x78,
-	0x2c, 0xca, 0x86, 0xb5, 0xf5, 0xf5, 0x80, 0x80, 0x7b, 0xa2, 0x6c, 0x58, 0x1b, 0x5f, 0x0f, 0x09,
-	0xf8, 0x4c, 0x94, 0x09, 0x6b, 0xe3, 0xeb, 0x11, 0x01, 0x27, 0xa2, 0x4c, 0x58, 0x17, 0xbe, 0x56,
-	0x04, 0x3c, 0x14, 0x55, 0x84, 0x75, 0xe1, 0x6b, 0x24, 0xe0, 0x81, 0xa8, 0xe2, 0xaf, 0x9e, 0x63,
-	0x64, 0x82, 0x3c, 0x22, 0xe0, 0x89, 0xa0, 0xf1, 0xbd, 0x13, 0xfc, 0x0f, 0x62, 0x02, 0x9e, 0x36,
-	0x42, 0x78, 0x7e, 0xa6, 0x75, 0xb5, 0x79, 0xdd, 0x56, 0x36, 0x9f, 0x8d, 0x09, 0x78, 0x24, 0xaa,
-	0x21, 0xf7, 0x0d, 0x68, 0xee, 0xde, 0xd4, 0xfb, 0x72, 0xf7, 0x74, 0x12, 0xfe, 0x13, 0xb0, 0x92,
-	0xe8, 0xc8, 0x8e, 0xca, 0x1c, 0xa3, 0xec, 0xad, 0xce, 0xcd, 0xc9, 0x98, 0x10, 0x70, 0x2c, 0xe8,
-	0x90, 0x13, 0x6e, 0xa7, 0x1f, 0x87, 0x14, 0x3e, 0x0f, 0x29, 0x7c, 0x1d, 0x52, 0x78, 0xff, 0x4e,
-	0xff, 0x65, 0x03, 0xf7, 0x14, 0x96, 0xbf, 0x01, 0x00, 0x00, 0xff, 0xff, 0xc7, 0x09, 0xe0, 0x6f,
-	0x1f, 0x02, 0x00, 0x00,
+	// 294 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x4c, 0xd1, 0x3d, 0x4e, 0xc3, 0x40,
+	0x10, 0x86, 0x61, 0x26, 0xbf, 0xeb, 0xb1, 0x43, 0x82, 0x2b, 0x24, 0x84, 0x99, 0x50, 0x4d, 0x85,
+	0x44, 0x12, 0xe5, 0x00, 0x1c, 0x61, 0x0a, 0x5a, 0x14, 0x83, 0x8d, 0x2c, 0x59, 0x2c, 0xca, 0xda,
+	0x48, 0xdc, 0x84, 0x23, 0x51, 0x52, 0x70, 0x00, 0x14, 0x2e, 0x82, 0xbc, 0x5e, 0x36, 0x5b, 0xad,
+	0xf4, 0xbd, 0xf3, 0x54, 0x8b, 0xd8, 0x14, 0xa6, 0xb9, 0x79, 0xdd, 0xeb, 0x46, 0xa7, 0xca, 0x3e,
+	0x8f, 0xba, 0xbe, 0xfe, 0x1e, 0xe2, 0xb8, 0x0b, 0xb7, 0xe9, 0x12, 0x93, 0x27, 0xdd, 0xe6, 0x75,
+	0xf1, 0xf0, 0xb6, 0xab, 0xdb, 0xe2, 0x1c, 0x08, 0x18, 0x24, 0xee, 0xb7, 0xfb, 0x6e, 0x4a, 0xaf,
+	0x30, 0x2e, 0x6b, 0xbd, 0x6b, 0xdc, 0xc5, 0x80, 0x80, 0x07, 0x82, 0x76, 0xea, 0x0f, 0x2e, 0x30,
+	0xaa, 0xd6, 0x2b, 0x97, 0x87, 0x04, 0x3c, 0x16, 0x55, 0xad, 0x57, 0xc7, 0xb8, 0xdd, 0xb8, 0x38,
+	0x22, 0xe0, 0xa1, 0xa8, 0x6a, 0xbb, 0xf1, 0xb1, 0xf5, 0x72, 0x4c, 0xc0, 0x33, 0x51, 0x6d, 0x20,
+	0x5b, 0x2f, 0x27, 0x04, 0x3c, 0x12, 0xd5, 0x06, 0xd2, 0x78, 0x39, 0x25, 0xe0, 0x33, 0x51, 0x26,
+	0x90, 0xc6, 0x4b, 0x45, 0xc0, 0xa9, 0x28, 0x13, 0xc8, 0xd2, 0xcb, 0x88, 0x80, 0xa7, 0xa2, 0xca,
+	0x40, 0x96, 0x5e, 0x22, 0x01, 0x4f, 0x44, 0x95, 0xff, 0xf2, 0x12, 0xd1, 0x1c, 0x69, 0x4c, 0xc0,
+	0x73, 0x89, 0x8c, 0xb7, 0x36, 0x7b, 0x9c, 0x10, 0xf0, 0xa2, 0xcb, 0x81, 0xce, 0xb5, 0xae, 0x5d,
+	0x9e, 0x11, 0xb0, 0x92, 0xa8, 0x5b, 0xfa, 0xbc, 0xc4, 0xc4, 0x34, 0xfb, 0xea, 0xe5, 0xd9, 0x1d,
+	0x9c, 0x12, 0x70, 0x24, 0x71, 0xbf, 0xf9, 0x8f, 0xc8, 0xdf, 0x9b, 0xc2, 0xb8, 0x8b, 0x39, 0x01,
+	0x27, 0x82, 0x76, 0xb2, 0x07, 0x77, 0x8b, 0xcf, 0x43, 0x06, 0x5f, 0x87, 0x0c, 0x7e, 0x0e, 0x19,
+	0x7c, 0xfc, 0x66, 0x27, 0xf9, 0xc4, 0x7e, 0xf9, 0xfa, 0x2f, 0x00, 0x00, 0xff, 0xff, 0x4c, 0x24,
+	0x9c, 0x46, 0x07, 0x02, 0x00, 0x00,
 }
 
 func (m *Test1) Marshal() (dAtA []byte, err error) {
@@ -260,69 +259,69 @@ func (m *Test1) MarshalToSizedBuffer(dAtA []byte) (int, error) {
 		i--
 		dAtA[i] = 0x68
 	}
-	if m.Sf64Number != 0 {
+	if m.Sf64Value != 0 {
 		i -= 8
-		encoding_binary.LittleEndian.PutUint64(dAtA[i:], uint64(m.Sf64Number))
+		encoding_binary.LittleEndian.PutUint64(dAtA[i:], uint64(m.Sf64Value))
 		i--
 		dAtA[i] = 0x61
 	}
-	if m.Sf32Number != 0 {
+	if m.Sf32Value != 0 {
 		i -= 4
-		encoding_binary.LittleEndian.PutUint32(dAtA[i:], uint32(m.Sf32Number))
+		encoding_binary.LittleEndian.PutUint32(dAtA[i:], uint32(m.Sf32Value))
 		i--
 		dAtA[i] = 0x5d
 	}
-	if m.F64Number != 0 {
+	if m.F64Value != 0 {
 		i -= 8
-		encoding_binary.LittleEndian.PutUint64(dAtA[i:], uint64(m.F64Number))
+		encoding_binary.LittleEndian.PutUint64(dAtA[i:], uint64(m.F64Value))
 		i--
 		dAtA[i] = 0x51
 	}
-	if m.F32Number != 0 {
+	if m.F32Value != 0 {
 		i -= 4
-		encoding_binary.LittleEndian.PutUint32(dAtA[i:], uint32(m.F32Number))
+		encoding_binary.LittleEndian.PutUint32(dAtA[i:], uint32(m.F32Value))
 		i--
 		dAtA[i] = 0x4d
 	}
-	if m.S64Number != 0 {
-		i = encodeVarintTest(dAtA, i, uint64((uint64(m.S64Number)<<1)^uint64((m.S64Number>>63))))
+	if m.S64Value != 0 {
+		i = encodeVarintTest(dAtA, i, uint64((uint64(m.S64Value)<<1)^uint64((m.S64Value>>63))))
 		i--
 		dAtA[i] = 0x40
 	}
-	if m.S32Number != 0 {
-		i = encodeVarintTest(dAtA, i, uint64((uint32(m.S32Number)<<1)^uint32((m.S32Number>>31))))
+	if m.S32Value != 0 {
+		i = encodeVarintTest(dAtA, i, uint64((uint32(m.S32Value)<<1)^uint32((m.S32Value>>31))))
 		i--
 		dAtA[i] = 0x38
 	}
-	if m.U64Number != 0 {
-		i = encodeVarintTest(dAtA, i, uint64(m.U64Number))
+	if m.U64Value != 0 {
+		i = encodeVarintTest(dAtA, i, uint64(m.U64Value))
 		i--
 		dAtA[i] = 0x30
 	}
-	if m.U32Number != 0 {
-		i = encodeVarintTest(dAtA, i, uint64(m.U32Number))
+	if m.U32Value != 0 {
+		i = encodeVarintTest(dAtA, i, uint64(m.U32Value))
 		i--
 		dAtA[i] = 0x28
 	}
-	if m.I64Number != 0 {
-		i = encodeVarintTest(dAtA, i, uint64(m.I64Number))
+	if m.I64Value != 0 {
+		i = encodeVarintTest(dAtA, i, uint64(m.I64Value))
 		i--
 		dAtA[i] = 0x20
 	}
-	if m.I32Number != 0 {
-		i = encodeVarintTest(dAtA, i, uint64(m.I32Number))
+	if m.I32Value != 0 {
+		i = encodeVarintTest(dAtA, i, uint64(m.I32Value))
 		i--
 		dAtA[i] = 0x18
 	}
-	if m.FloatNumber != 0 {
+	if m.FloatValue != 0 {
 		i -= 4
-		encoding_binary.LittleEndian.PutUint32(dAtA[i:], uint32(math.Float32bits(float32(m.FloatNumber))))
+		encoding_binary.LittleEndian.PutUint32(dAtA[i:], uint32(math.Float32bits(float32(m.FloatValue))))
 		i--
 		dAtA[i] = 0x15
 	}
-	if m.DoubleNumber != 0 {
+	if m.DoubleValue != 0 {
 		i -= 8
-		encoding_binary.LittleEndian.PutUint64(dAtA[i:], uint64(math.Float64bits(float64(m.DoubleNumber))))
+		encoding_binary.LittleEndian.PutUint64(dAtA[i:], uint64(math.Float64bits(float64(m.DoubleValue))))
 		i--
 		dAtA[i] = 0x9
 	}
@@ -346,40 +345,40 @@ func (m *Test1) Size() (n int) {
 	}
 	var l int
 	_ = l
-	if m.DoubleNumber != 0 {
+	if m.DoubleValue != 0 {
 		n += 9
 	}
-	if m.FloatNumber != 0 {
+	if m.FloatValue != 0 {
 		n += 5
 	}
-	if m.I32Number != 0 {
-		n += 1 + sovTest(uint64(m.I32Number))
+	if m.I32Value != 0 {
+		n += 1 + sovTest(uint64(m.I32Value))
 	}
-	if m.I64Number != 0 {
-		n += 1 + sovTest(uint64(m.I64Number))
+	if m.I64Value != 0 {
+		n += 1 + sovTest(uint64(m.I64Value))
 	}
-	if m.U32Number != 0 {
-		n += 1 + sovTest(uint64(m.U32Number))
+	if m.U32Value != 0 {
+		n += 1 + sovTest(uint64(m.U32Value))
 	}
-	if m.U64Number != 0 {
-		n += 1 + sovTest(uint64(m.U64Number))
+	if m.U64Value != 0 {
+		n += 1 + sovTest(uint64(m.U64Value))
 	}
-	if m.S32Number != 0 {
-		n += 1 + sozTest(uint64(m.S32Number))
+	if m.S32Value != 0 {
+		n += 1 + sozTest(uint64(m.S32Value))
 	}
-	if m.S64Number != 0 {
-		n += 1 + sozTest(uint64(m.S64Number))
+	if m.S64Value != 0 {
+		n += 1 + sozTest(uint64(m.S64Value))
 	}
-	if m.F32Number != 0 {
+	if m.F32Value != 0 {
 		n += 5
 	}
-	if m.F64Number != 0 {
+	if m.F64Value != 0 {
 		n += 9
 	}
-	if m.Sf32Number != 0 {
+	if m.Sf32Value != 0 {
 		n += 5
 	}
-	if m.Sf64Number != 0 {
+	if m.Sf64Value != 0 {
 		n += 9
 	}
 	if m.BoolValue {
@@ -436,7 +435,7 @@ func (m *Test1) Unmarshal(dAtA []byte) error {
 		switch fieldNum {
 		case 1:
 			if wireType != 1 {
-				return fmt.Errorf("proto: wrong wireType = %d for field DoubleNumber", wireType)
+				return fmt.Errorf("proto: wrong wireType = %d for field DoubleValue", wireType)
 			}
 			var v uint64
 			if (iNdEx + 8) > l {
@@ -444,10 +443,10 @@ func (m *Test1) Unmarshal(dAtA []byte) error {
 			}
 			v = uint64(encoding_binary.LittleEndian.Uint64(dAtA[iNdEx:]))
 			iNdEx += 8
-			m.DoubleNumber = float64(math.Float64frombits(v))
+			m.DoubleValue = float64(math.Float64frombits(v))
 		case 2:
 			if wireType != 5 {
-				return fmt.Errorf("proto: wrong wireType = %d for field FloatNumber", wireType)
+				return fmt.Errorf("proto: wrong wireType = %d for field FloatValue", wireType)
 			}
 			var v uint32
 			if (iNdEx + 4) > l {
@@ -455,12 +454,12 @@ func (m *Test1) Unmarshal(dAtA []byte) error {
 			}
 			v = uint32(encoding_binary.LittleEndian.Uint32(dAtA[iNdEx:]))
 			iNdEx += 4
-			m.FloatNumber = float32(math.Float32frombits(v))
+			m.FloatValue = float32(math.Float32frombits(v))
 		case 3:
 			if wireType != 0 {
-				return fmt.Errorf("proto: wrong wireType = %d for field I32Number", wireType)
+				return fmt.Errorf("proto: wrong wireType = %d for field I32Value", wireType)
 			}
-			m.I32Number = 0
+			m.I32Value = 0
 			for shift := uint(0); ; shift += 7 {
 				if shift >= 64 {
 					return ErrIntOverflowTest
@@ -470,16 +469,16 @@ func (m *Test1) Unmarshal(dAtA []byte) error {
 				}
 				b := dAtA[iNdEx]
 				iNdEx++
-				m.I32Number |= int32(b&0x7F) << shift
+				m.I32Value |= int32(b&0x7F) << shift
 				if b < 0x80 {
 					break
 				}
 			}
 		case 4:
 			if wireType != 0 {
-				return fmt.Errorf("proto: wrong wireType = %d for field I64Number", wireType)
+				return fmt.Errorf("proto: wrong wireType = %d for field I64Value", wireType)
 			}
-			m.I64Number = 0
+			m.I64Value = 0
 			for shift := uint(0); ; shift += 7 {
 				if shift >= 64 {
 					return ErrIntOverflowTest
@@ -489,16 +488,16 @@ func (m *Test1) Unmarshal(dAtA []byte) error {
 				}
 				b := dAtA[iNdEx]
 				iNdEx++
-				m.I64Number |= int64(b&0x7F) << shift
+				m.I64Value |= int64(b&0x7F) << shift
 				if b < 0x80 {
 					break
 				}
 			}
 		case 5:
 			if wireType != 0 {
-				return fmt.Errorf("proto: wrong wireType = %d for field U32Number", wireType)
+				return fmt.Errorf("proto: wrong wireType = %d for field U32Value", wireType)
 			}
-			m.U32Number = 0
+			m.U32Value = 0
 			for shift := uint(0); ; shift += 7 {
 				if shift >= 64 {
 					return ErrIntOverflowTest
@@ -508,16 +507,16 @@ func (m *Test1) Unmarshal(dAtA []byte) error {
 				}
 				b := dAtA[iNdEx]
 				iNdEx++
-				m.U32Number |= uint32(b&0x7F) << shift
+				m.U32Value |= uint32(b&0x7F) << shift
 				if b < 0x80 {
 					break
 				}
 			}
 		case 6:
 			if wireType != 0 {
-				return fmt.Errorf("proto: wrong wireType = %d for field U64Number", wireType)
+				return fmt.Errorf("proto: wrong wireType = %d for field U64Value", wireType)
 			}
-			m.U64Number = 0
+			m.U64Value = 0
 			for shift := uint(0); ; shift += 7 {
 				if shift >= 64 {
 					return ErrIntOverflowTest
@@ -527,14 +526,14 @@ func (m *Test1) Unmarshal(dAtA []byte) error {
 				}
 				b := dAtA[iNdEx]
 				iNdEx++
-				m.U64Number |= uint64(b&0x7F) << shift
+				m.U64Value |= uint64(b&0x7F) << shift
 				if b < 0x80 {
 					break
 				}
 			}
 		case 7:
 			if wireType != 0 {
-				return fmt.Errorf("proto: wrong wireType = %d for field S32Number", wireType)
+				return fmt.Errorf("proto: wrong wireType = %d for field S32Value", wireType)
 			}
 			var v int32
 			for shift := uint(0); ; shift += 7 {
@@ -552,10 +551,10 @@ func (m *Test1) Unmarshal(dAtA []byte) error {
 				}
 			}
 			v = int32((uint32(v) >> 1) ^ uint32(((v&1)<<31)>>31))
-			m.S32Number = v
+			m.S32Value = v
 		case 8:
 			if wireType != 0 {
-				return fmt.Errorf("proto: wrong wireType = %d for field S64Number", wireType)
+				return fmt.Errorf("proto: wrong wireType = %d for field S64Value", wireType)
 			}
 			var v uint64
 			for shift := uint(0); ; shift += 7 {
@@ -573,46 +572,46 @@ func (m *Test1) Unmarshal(dAtA []byte) error {
 				}
 			}
 			v = (v >> 1) ^ uint64((int64(v&1)<<63)>>63)
-			m.S64Number = int64(v)
+			m.S64Value = int64(v)
 		case 9:
 			if wireType != 5 {
-				return fmt.Errorf("proto: wrong wireType = %d for field F32Number", wireType)
+				return fmt.Errorf("proto: wrong wireType = %d for field F32Value", wireType)
 			}
-			m.F32Number = 0
+			m.F32Value = 0
 			if (iNdEx + 4) > l {
 				return io.ErrUnexpectedEOF
 			}
-			m.F32Number = uint32(encoding_binary.LittleEndian.Uint32(dAtA[iNdEx:]))
+			m.F32Value = uint32(encoding_binary.LittleEndian.Uint32(dAtA[iNdEx:]))
 			iNdEx += 4
 		case 10:
 			if wireType != 1 {
-				return fmt.Errorf("proto: wrong wireType = %d for field F64Number", wireType)
+				return fmt.Errorf("proto: wrong wireType = %d for field F64Value", wireType)
 			}
-			m.F64Number = 0
+			m.F64Value = 0
 			if (iNdEx + 8) > l {
 				return io.ErrUnexpectedEOF
 			}
-			m.F64Number = uint64(encoding_binary.LittleEndian.Uint64(dAtA[iNdEx:]))
+			m.F64Value = uint64(encoding_binary.LittleEndian.Uint64(dAtA[iNdEx:]))
 			iNdEx += 8
 		case 11:
 			if wireType != 5 {
-				return fmt.Errorf("proto: wrong wireType = %d for field Sf32Number", wireType)
+				return fmt.Errorf("proto: wrong wireType = %d for field Sf32Value", wireType)
 			}
-			m.Sf32Number = 0
+			m.Sf32Value = 0
 			if (iNdEx + 4) > l {
 				return io.ErrUnexpectedEOF
 			}
-			m.Sf32Number = int32(encoding_binary.LittleEndian.Uint32(dAtA[iNdEx:]))
+			m.Sf32Value = int32(encoding_binary.LittleEndian.Uint32(dAtA[iNdEx:]))
 			iNdEx += 4
 		case 12:
 			if wireType != 1 {
-				return fmt.Errorf("proto: wrong wireType = %d for field Sf64Number", wireType)
+				return fmt.Errorf("proto: wrong wireType = %d for field Sf64Value", wireType)
 			}
-			m.Sf64Number = 0
+			m.Sf64Value = 0
 			if (iNdEx + 8) > l {
 				return io.ErrUnexpectedEOF
 			}
-			m.Sf64Number = int64(encoding_binary.LittleEndian.Uint64(dAtA[iNdEx:]))
+			m.Sf64Value = int64(encoding_binary.LittleEndian.Uint64(dAtA[iNdEx:]))
 			iNdEx += 8
 		case 13:
 			if wireType != 0 {

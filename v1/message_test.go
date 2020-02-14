@@ -32,8 +32,8 @@ func TestDouble_Bytes(t *testing.T) {
 	}
 	assert.Equal(t, err, nil)
 
-	assert.Equal(t, test1.DoubleNumber, 9.7)
-	if !(test1.DoubleNumber-9.7 < 10e-7) {
-		t.Error(err, test1.DoubleNumber)
+	assert.Equal(t, test1.DoubleValue, 9.7)
+	if !(test1.DoubleValue-9.7 < 10e-7) {
+		t.Error(err, test1.DoubleValue)
 	}
 }
