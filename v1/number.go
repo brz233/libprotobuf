@@ -6,49 +6,56 @@ import (
 )
 
 type ProtoBuffer struct {
-	buf bytes.Buffer
+	buf *bytes.Buffer
+}
+
+func NewProtoBuffer(bs []byte) *ProtoBuffer {
+	return &ProtoBuffer{buf: bytes.NewBuffer(bs)}
 }
 
 // Constants that identify the encoding of a value on the wire.
 const (
-	WireVarint     = 0
-	WireFixed64    = 1
-	WireBytes      = 2
-	WireStartGroup = 3
-	WireEndGroup   = 4
-	WireFixed32    = 5
+	WireVarint  = 0
+	WireFixed64 = 1
+	WireBytes   = 2
+	//WireStartGroup = 3
+	//WireEndGroup   = 4
+	WireFixed32 = 5
 )
 
 const ()
 
-func (p *ProtoBuffer) varintWithWireType(x uint64, w int) (err error) {
-	fByte := byte(int(x<<3) | w)
+func Zigzag(x int64) uint64 {
+	return uint64(x>>7 ^ x<<1)
+}
+
+func GenVarintWithWireType(x uint64, w int) (bs []byte) {
+	bs = make([]byte, 0, 10)
+	bs = append(bs, byte(int(x<<3)|w))
 	x = x >> 3
-	if err = p.buf.WriteByte(fByte); err != nil {
-		return
-	}
 	for x > 0 {
-		if err = p.buf.WriteByte(byte(x << 7)); err != nil {
-			return err
-		}
+		bs = append(bs, byte(x<<7))
 		x = x >> 7
 	}
-	return nil
+	return bs
+}
+
+//GenVarintWithByteSize
+func GenVarintWithByteSize(x uint64, size int) (bs []byte) {
+	bs = make([]byte, 0, 10)
+	bs = append(bs, GenVarintWithWireType(x, WireBytes)...)
+	bs = append(bs, GenVarint(uint64(size))...)
+	return bs
 }
 
 //varint
-func (p *ProtoBuffer) varint(x uint64) (err error) {
-	_, err = p.buf.Write(proto.EncodeVarint(x))
-	return
+func GenVarint(x uint64) (bs []byte) {
+	return proto.EncodeVarint(x)
 }
 
-func (p *ProtoBuffer) AddBytes(x uint64, bs []byte) (err error) {
-	if err = p.varintWithWireType(x, WireBytes); err != nil {
-		return
-	}
-	if _, err = p.buf.Write(proto.EncodeVarint(uint64(len(bs)))); err != nil {
-		return
-	}
-	_, err = p.buf.Write(bs)
-	return
+func GenWireBytes(x uint64, content []byte) (bs []byte) {
+	bs = make([]byte, 0, len(content)+10)
+	bs = append(bs, GenVarintWithWireType(x, WireBytes)...)
+	bs = append(bs, GenVarint(uint64(len(content)))...)
+	return append(bs, content...)
 }
