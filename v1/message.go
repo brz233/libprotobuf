@@ -67,9 +67,9 @@ func (r Record) Bytes() ([]byte, error) {
 		case Bool:
 			buf = append(buf, GenVarintWithWireType(k, WireVarint)...)
 		case String:
-			buf = append(buf, GenWireBytes(k, []byte(v.(String)))...)
+			buf = append(buf, GenVarintWithByteSize(k, len(bs))...)
 		case Bytes:
-			buf = append(buf, GenWireBytes(k, v.(Bytes))...)
+			buf = append(buf, GenVarintWithByteSize(k, len(bs))...)
 		default:
 			return nil, errors.New("unsupported type")
 		}
@@ -120,11 +120,11 @@ func (m Uint64) Bytes() (bs []byte, err error) {
 	return GenVarint(uint64(m)), nil
 }
 
-func (m Sint64) Bytes() (bs []byte, err error) {
+func (m Sint32) Bytes() (bs []byte, err error) {
 	return GenVarint(Zigzag(int64(m))), nil
 }
 
-func (m Sint32) Bytes() (bs []byte, err error) {
+func (m Sint64) Bytes() (bs []byte, err error) {
 	return GenVarint(Zigzag(int64(m))), nil
 }
 

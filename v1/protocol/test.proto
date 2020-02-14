@@ -19,3 +19,7 @@ message test1 {
     string      string_value    = 14;
     bytes       bytes_value     = 15;
 }
+
+message test2 {
+
+}

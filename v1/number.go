@@ -23,8 +23,6 @@ const (
 	WireFixed32 = 5
 )
 
-const ()
-
 func Zigzag(x int64) uint64 {
 	return uint64(x>>7 ^ x<<1)
 }
@@ -32,10 +30,15 @@ func Zigzag(x int64) uint64 {
 func GenVarintWithWireType(x uint64, w int) (bs []byte) {
 	bs = make([]byte, 0, 10)
 	bs = append(bs, byte(int(x<<3)|w))
-	x = x >> 3
+	x = x >> 4
 	for x > 0 {
-		bs = append(bs, byte(x<<7))
+		tempX := byte(x << 7 >> 7)
 		x = x >> 7
+		if x > 0 {
+			bs = append(bs, tempX|128)
+			continue
+		}
+		bs = append(bs, tempX)
 	}
 	return bs
 }
