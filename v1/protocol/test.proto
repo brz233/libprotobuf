@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package protocol;
+
+message test1 {
+    double      double_number   = 1;
+    float       float_number    = 2;
+    int32       i32_number      = 3;
+    int64       i64_number      = 4;
+    uint32      u32_number      = 5;
+    uint64      u64_number      = 6;
+    sint32      s32_number      = 7;
+    sint64      s64_number      = 8;
+    fixed32     f32_number      = 9;
+    fixed64     f64_number      = 10;
+    sfixed32    sf32_number     = 11;
+    sfixed64    sf64_number     = 12;
+    bool        bool_value      = 13;
+    string      string_value    = 14;
+    bytes       bytes_value     = 15;
+}
