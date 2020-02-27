@@ -2,24 +2,136 @@ syntax = "proto3";
 
 package protocol;
 
-message test1 {
-    double      double_value    = 1;
-    float       float_value     = 2;
-    int32       i32_value       = 3;
-    int64       i64_value       = 4;
-    uint32      u32_value       = 5;
-    uint64      u64_value       = 6;
-    sint32      s32_value       = 7;
-    sint64      s64_value       = 8;
-    fixed32     f32_value       = 9;
-    fixed64     f64_value       = 10;
-    sfixed32    sf32_value      = 11;
-    sfixed64    sf64_value      = 12;
-    bool        bool_value      = 13;
-    string      string_value    = 14;
-    bytes       bytes_value     = 15;
+message double_item {
+    double value1 = 1;
+    double value2 = 2;
+    double value3 = 3;
+    double value4 = 4;
+    double value5 = 5;
 }
 
-message test2 {
+message float_item {
+    float value1 = 1;
+    float value2 = 2;
+    float value3 = 3;
+    float value4 = 4;
+    float value5 = 5;
+}
 
+message int32_item {
+    int32 value1 = 1;
+    int32 value2 = 2;
+    int32 value3 = 3;
+    int32 value4 = 4;
+    int32 value5 = 5;
+}
+
+message int64_item {
+    int64 value1 = 1;
+    int64 value2 = 2;
+    int64 value3 = 3;
+    int64 value4 = 4;
+    int64 value5 = 5;
+}
+
+message uint32_item {
+    uint32 value1 = 1;
+    uint32 value2 = 2;
+    uint32 value3 = 3;
+    uint32 value4 = 4;
+    uint32 value5 = 5;
+}
+
+message uint64_item {
+    uint64 value1 = 1;
+    uint64 value2 = 2;
+    uint64 value3 = 3;
+    uint64 value4 = 4;
+    uint64 value5 = 5;
+}
+
+message sint32_item {
+    sint32 value1 = 1;
+    sint32 value2 = 2;
+    sint32 value3 = 3;
+    sint32 value4 = 4;
+    sint32 value5 = 5;
+}
+
+message sint64_item {
+    sint64  value1 = 1;
+    sint64  value2 = 2;
+    sint64  value3 = 3;
+    sint64  value4 = 4;
+    sint64  value5 = 5;
+}
+
+message fixed32_item {
+    fixed32 value1 = 1;
+    fixed32 value2 = 2;
+    fixed32 value3 = 3;
+    fixed32 value4 = 4;
+    fixed32 value5 = 5;
+}
+
+message fixed64_item {
+    fixed64 value1 = 1;
+    fixed64 value2 = 2;
+    fixed64 value3 = 3;
+    fixed64 value4 = 4;
+    fixed64 value5 = 5;
+}
+
+message sfixed32_item {
+    sfixed32 value1 = 1;
+    sfixed32 value2 = 2;
+    sfixed32 value3 = 3;
+    sfixed32 value4 = 4;
+    sfixed32 value5 = 5;
+}
+
+message sfixed64_item {
+    sfixed64 value1 = 1;
+    sfixed64 value2 = 2;
+    sfixed64 value3 = 3;
+    sfixed64 value4 = 4;
+    sfixed64 value5 = 5;
+}
+
+message bool_item {
+    bool value1 = 1;
+    bool value2 = 2;
+    bool value3 = 3;
+    bool value4 = 4;
+    bool value5 = 5;
+}
+
+message string_item {
+    string value1 = 1;
+    string value2 = 2;
+    string value3 = 3;
+    string value4 = 4;
+    string value5 = 5;
+}
+
+message bytes_item {
+    bytes value1 = 1;
+    bytes value2 = 2;
+    bytes value3 = 3;
+    bytes value4 = 4;
+    bytes value5 = 5;
+}
+
+message repeated_item {
+    repeated double values = 1;
+}
+
+message record_item {
+    inner_record_item inner = 1;
+    int32 num = 2;
+}
+
+message inner_record_item {
+    int32 id = 1;
+    string name = 2;
 }

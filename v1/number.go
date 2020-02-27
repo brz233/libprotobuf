@@ -23,6 +23,14 @@ const (
 	WireFixed32 = 5
 )
 
+func Zigzag32(x int32) uint64 {
+	return uint64(x>>31 ^ x<<1)
+}
+
+func Zigzag64(x int64) uint64 {
+	return uint64(x>>63 ^ x<<1)
+}
+
 func Zigzag(x int64) uint64 {
 	return uint64(x>>7 ^ x<<1)
 }

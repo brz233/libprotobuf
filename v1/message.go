@@ -35,6 +35,11 @@ func (r Record) Bytes() ([]byte, error) {
 		if err != nil {
 			return nil, err
 		}
+
+		if len(bs) == 0 {
+			continue
+		}
+
 		switch v.(type) {
 		case Record:
 			buf = append(buf, GenVarintWithByteSize(k, len(bs))...)
@@ -91,6 +96,10 @@ func (m Repeat) Bytes() (bs []byte, err error) {
 }
 
 func (m Double) Bytes() (bs []byte, err error) {
+	if m == 0 {
+		return
+	}
+
 	n := math.Float64bits(float64(m))
 	bs = make([]byte, 8)
 	binary.LittleEndian.PutUint64(bs, n)
@@ -98,6 +107,9 @@ func (m Double) Bytes() (bs []byte, err error) {
 }
 
 func (m Float) Bytes() (bs []byte, err error) {
+	if m == 0 {
+		return
+	}
 	n := math.Float32bits(float32(m))
 	bs = make([]byte, 4)
 	binary.LittleEndian.PutUint32(bs, n)
@@ -105,48 +117,78 @@ func (m Float) Bytes() (bs []byte, err error) {
 }
 
 func (m Int32) Bytes() (bs []byte, err error) {
+	if m == 0 {
+		return
+	}
 	return GenVarint(uint64(m)), nil
 }
 
 func (m Int64) Bytes() (bs []byte, err error) {
+	if m == 0 {
+		return
+	}
 	return GenVarint(uint64(m)), nil
 }
 
 func (m Uint32) Bytes() (bs []byte, err error) {
+	if m == 0 {
+		return
+	}
 	return GenVarint(uint64(m)), nil
 }
 
 func (m Uint64) Bytes() (bs []byte, err error) {
+	if m == 0 {
+		return
+	}
 	return GenVarint(uint64(m)), nil
 }
 
 func (m Sint32) Bytes() (bs []byte, err error) {
-	return GenVarint(Zigzag(int64(m))), nil
+	if m == 0 {
+		return
+	}
+	return GenVarint(Zigzag32(int32(m))), nil
 }
 
 func (m Sint64) Bytes() (bs []byte, err error) {
-	return GenVarint(Zigzag(int64(m))), nil
+	if m == 0 {
+		return
+	}
+	return GenVarint(Zigzag64(int64(m))), nil
 }
 
 func (m Fixed32) Bytes() (bs []byte, err error) {
+	if m == 0 {
+		return
+	}
 	bs = make([]byte, 4)
 	binary.LittleEndian.PutUint32(bs, uint32(m))
 	return bs, nil
 }
 
 func (m Fixed64) Bytes() (bs []byte, err error) {
+	if m == 0 {
+		return
+	}
 	bs = make([]byte, 8)
 	binary.LittleEndian.PutUint64(bs, uint64(m))
 	return bs, nil
 }
 
 func (m Sfixed32) Bytes() (bs []byte, err error) {
+	if m == 0 {
+		return
+	}
 	bs = make([]byte, 4)
 	binary.LittleEndian.PutUint32(bs, uint32(m))
 	return bs, nil
 }
 
 func (m Sfixed64) Bytes() (bs []byte, err error) {
+	if m == 0 {
+		return
+	}
 	bs = make([]byte, 8)
 	binary.LittleEndian.PutUint64(bs, uint64(m))
 	return bs, nil
