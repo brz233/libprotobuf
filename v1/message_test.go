@@ -1,4 +1,4 @@
-package v1
+package libproto
 
 import (
 	pb "github.com/brz233/libprotobuf/v1/protocol"

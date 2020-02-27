@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package protocol;
+
+message user {
+    uint32 id = 1;
+    string name = 2;
+    string sex = 3;
+    birth other = 4;
+}
+
+message birth {
+    uint32 year = 1;
+    uint32 month = 2;
+    uint32 day = 3;
+    string country = 4;
+    string city = 5;
+}
